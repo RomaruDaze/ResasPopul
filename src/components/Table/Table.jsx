@@ -6,9 +6,9 @@ function DataTable({ data }) {
       <table>
         <thead>
           <tr>
-            <th>Year</th>
-            <th>Category</th>
-            <th>Population</th>
+            <th>年</th>
+            <th>カテゴリー</th>
+            <th>人口</th>
           </tr>
         </thead>
         <tbody>

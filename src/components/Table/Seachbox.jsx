@@ -67,10 +67,8 @@ function Searchbox({ setCityCode, setPrefCode, setCategory }) {
 
   return (
     <div>
-      <div className="searchbox-title">
-        <h1>検索条件</h1>
-      </div>
       <div className="searchbox">
+        <h1>検索条件：</h1>
         <div
           className="dropdown"
           onBlur={(event) => handleDropdownBlur(event, setShowPrefDropdown)}
