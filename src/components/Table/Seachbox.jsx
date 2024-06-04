@@ -66,91 +66,96 @@ function Searchbox({ setCityCode, setPrefCode, setCategory }) {
     "Select Prefecture";
 
   return (
-    <div className="searchbox">
-      <div
-        className="dropdown"
-        onBlur={(event) => handleDropdownBlur(event, setShowPrefDropdown)}
-        tabIndex="0"
-      >
-        <button
-          className="dropbtn"
-          onClick={() => setShowPrefDropdown(!showPrefDropdown)}
-        >
-          {getPrefName(selectedPrefCode)}
-        </button>
-        {showPrefDropdown && (
-          <div className="dropdown-content">
-            {prefOptions.map((option) => (
-              <label key={option.code}>
-                <input
-                  type="radio"
-                  name="prefecture"
-                  value={option.code}
-                  checked={selectedPrefCode === option.code}
-                  onChange={handlePrefChange}
-                />
-                {option.name}
-              </label>
-            ))}
-          </div>
-        )}
+    <div>
+      <div className="searchbox-title">
+        <h1>検索条件</h1>
       </div>
-      <div
-        className="dropdown"
-        onBlur={(event) => handleDropdownBlur(event, setShowCityDropdown)}
-        tabIndex="0"
-      >
-        <button
-          className="dropbtn"
-          onClick={() => setShowCityDropdown(!showCityDropdown)}
+      <div className="searchbox">
+        <div
+          className="dropdown"
+          onBlur={(event) => handleDropdownBlur(event, setShowPrefDropdown)}
+          tabIndex="0"
         >
-          {getCityName(selectedCityCode)}
-        </button>
-        {showCityDropdown && (
-          <div className="dropdown-content">
-            {cityOptions.map((option) => (
-              <label key={option.code}>
-                <input
-                  type="radio"
-                  name="city"
-                  value={option.code}
-                  checked={selectedCityCode === option.code}
-                  onChange={handleCityChange}
-                />
-                {option.name}
-              </label>
-            ))}
-          </div>
-        )}
-      </div>
-      <div
-        className="dropdown"
-        onBlur={(event) => handleDropdownBlur(event, setShowCategoryDropdown)}
-        tabIndex="0"
-      >
-        <button
-          className="dropbtn"
-          onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
+          <button
+            className="dropbtn"
+            onClick={() => setShowPrefDropdown(!showPrefDropdown)}
+          >
+            {getPrefName(selectedPrefCode)}
+          </button>
+          {showPrefDropdown && (
+            <div className="dropdown-content">
+              {prefOptions.map((option) => (
+                <label key={option.code}>
+                  <input
+                    type="radio"
+                    name="prefecture"
+                    value={option.code}
+                    checked={selectedPrefCode === option.code}
+                    onChange={handlePrefChange}
+                  />
+                  {option.name}
+                </label>
+              ))}
+            </div>
+          )}
+        </div>
+        <div
+          className="dropdown"
+          onBlur={(event) => handleDropdownBlur(event, setShowCityDropdown)}
+          tabIndex="0"
         >
-          {categories.find((option) => option.code === selectedCategory)
-            ?.name || "Select Category"}
-        </button>
-        {showCategoryDropdown && (
-          <div className="dropdown-content-cat">
-            {categories.map((option) => (
-              <label key={option.code}>
-                <input
-                  type="radio"
-                  name="category"
-                  value={option.code}
-                  checked={selectedCategory === option.code}
-                  onChange={handleCategoryChange}
-                />
-                {option.name}
-              </label>
-            ))}
-          </div>
-        )}
+          <button
+            className="dropbtn"
+            onClick={() => setShowCityDropdown(!showCityDropdown)}
+          >
+            {getCityName(selectedCityCode)}
+          </button>
+          {showCityDropdown && (
+            <div className="dropdown-content">
+              {cityOptions.map((option) => (
+                <label key={option.code}>
+                  <input
+                    type="radio"
+                    name="city"
+                    value={option.code}
+                    checked={selectedCityCode === option.code}
+                    onChange={handleCityChange}
+                  />
+                  {option.name}
+                </label>
+              ))}
+            </div>
+          )}
+        </div>
+        <div
+          className="dropdown"
+          onBlur={(event) => handleDropdownBlur(event, setShowCategoryDropdown)}
+          tabIndex="0"
+        >
+          <button
+            className="dropbtn"
+            onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
+          >
+            {categories.find((option) => option.code === selectedCategory)
+              ?.name || "Select Category"}
+          </button>
+          {showCategoryDropdown && (
+            <div className="dropdown-content-cat">
+              {categories.map((option) => (
+                <label key={option.code}>
+                  <input
+                    type="radio"
+                    name="category"
+                    value={option.code}
+                    checked={selectedCategory === option.code}
+                    onChange={handleCategoryChange}
+                  />
+                  {option.name}
+                </label>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

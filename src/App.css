@@ -32,10 +32,12 @@
     align-self: center;
 }
 
+
 /* Chart */
 .chart {
     width: 130%;
     height: 130%;
+    margin: 50px 0px 50px 0px;
 }
 
 /* Table */
@@ -65,8 +67,18 @@ thead {
 }
 
 /* searchBox */
+
+.searchbox-title {
+    color: #f1f1f1;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: -30px;
+}
+
 .searchbox {
-    padding: 10px;
     display: flex;
     align-self: center;
     justify-content: center;

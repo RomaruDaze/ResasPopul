@@ -11,10 +11,12 @@ function ResasAPI() {
 
   return (
     <div>
+      
       <Searchbox
         setCityCode={setCityCode}
         setPrefCode={setPrefCode}
         setCategory={setCategory}
+        className="search"
       />
       <div className="chart">
         <Line data={chartData} options={chartOptions} />
