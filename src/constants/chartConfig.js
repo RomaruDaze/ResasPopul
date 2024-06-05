@@ -8,9 +8,7 @@ import {
     Title,
     Tooltip,
     Legend,
-    Colors,
 } from 'chart.js';
-import { color } from 'chart.js/helpers';
 
 ChartJS.register(
     CategoryScale,
@@ -46,17 +44,17 @@ export const chartOptions = {
 
             },
             ticks: {
-                color: "#f1f1f1", 
+                color: "#f1f1f1",
             },
         },
         x: {
             ticks: {
-                color: "#f1f1f1", 
+                color: "#f1f1f1",
             },
             title: {
                 display: true,
                 text: 'Year',
-                color: "#f1f1f1", 
+                color: "#f1f1f1",
             }
         }
     },
@@ -64,7 +62,7 @@ export const chartOptions = {
         legend: {
             display: true,
             labels: {
-                color: "#f1f1f1", 
+                color: "#f1f1f1",
             }
         },
         tooltip: {
