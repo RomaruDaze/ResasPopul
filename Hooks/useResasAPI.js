@@ -9,7 +9,7 @@ function useResasApi() {
 
     useEffect(() => {
         if (cityCode && prefCode && category) {
-            const apiKey = import.meta.env.VITE_API_KEY;
+            const apiKey = import.meta.env.VITE_RESAS_API_KEY;
             const headers = { "X-API-KEY": apiKey };
             const url = `https://opendata.resas-portal.go.jp/api/v1/population/composition/perYear?cityCode=${cityCode}&prefCode=${prefCode}`;
 
