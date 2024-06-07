@@ -1,5 +1,5 @@
 .outer-app {
-    background-color: #f1f1f1;
+    background-color: #3a3a3a;
 }
 
 .inner-app {
@@ -44,9 +44,12 @@
 
 /* Chart */
 .chart {
-    width: 130%;
-    height: 130%;
-    margin: 50px 0px 50px 0px;
+    width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Table */
@@ -56,6 +59,16 @@
     justify-content: center;
     align-items: center;
 
+}
+
+.table-title {
+    color: #f1f1f1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 }
 
 .table table {

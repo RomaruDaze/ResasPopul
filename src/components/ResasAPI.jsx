@@ -6,12 +6,11 @@ import { Line } from "react-chartjs-2";
 import { getChartData, chartOptions } from "../constants/chartConfig";
 
 function ResasAPI() {
-  const { data, setCityCode, setPrefCode, setCategory } = useResasAPI();
+  const { data, setCityCode, setPrefCode, setCategory } = useResasAPI(); 
   const chartData = getChartData(data);
 
   return (
     <div>
-      
       <Searchbox
         setCityCode={setCityCode}
         setPrefCode={setPrefCode}

@@ -48,7 +48,7 @@ export const chartOptions = {
             },
             title: {
                 display: true,
-                text: '人',
+                text: '人数',
                 color: "#f1f1f1",
             }
         },

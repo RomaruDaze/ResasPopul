@@ -1,6 +1,6 @@
 async function fetchCityOptions(prefCode) {
     const url = `https://opendata.resas-portal.go.jp/api/v1/cities?prefCode=${prefCode}`;
-    const apiKey = "SYCXoS2nj8kRZ9uFWFz39pWUsUcQOIvGWCCkuuYK";
+    const apiKey = import.meta.env.VITE_RESAS_API_KEY;
 
     try {
         const response = await fetch(url, {
