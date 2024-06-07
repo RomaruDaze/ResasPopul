@@ -32,8 +32,8 @@ export const getChartData = (data) => {
       {
         label: "人口数",
         data: data.map((item) => item.value),
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
+        backgroundColor: 'rgba(0, 200, 200, 0.6)',
+        borderColor: 'rgba(0, 255, 255, 1)', 
         borderWidth: 1,
       }
     ]
