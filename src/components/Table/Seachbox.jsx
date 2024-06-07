@@ -68,9 +68,6 @@ function Searchbox({ setCityCode, setPrefCode, setCategory }) {
 
   return (
     <div>
-      <div className="search-title">
-        <h1>検索条件</h1>
-      </div>
       <div className="searchbox">
         <div
           className="dropdown"

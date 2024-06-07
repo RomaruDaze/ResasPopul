@@ -21,18 +21,24 @@ ChartJS.register(
     Legend,
 );
 
-export const getChartData = (data) => ({
+export const getChartData = (data) => {
+  if (!Array.isArray(data)) {
+    return { labels: [], datasets: [] };
+  }
+
+  return {
     labels: data.map((item) => item.year),
     datasets: [
-        {
-            label: "人口数",
-            data: data.map((item) => item.value),
-            backgroundColor: "rgba(75, 192, 192, 0.2)",
-            borderColor: "rgba(75, 192, 192, 1)",
-            borderWidth: 2,
-        },
-    ],
-});
+      {
+        label: "人口数",
+        data: data.map((item) => item.value),
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1,
+      }
+    ]
+  };
+};
 
 export const chartOptions = {
     scales: {
