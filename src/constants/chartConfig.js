@@ -25,7 +25,7 @@ export const getChartData = (data) => ({
     labels: data.map((item) => item.year),
     datasets: [
         {
-            label: "Population",
+            label: "人口数",
             data: data.map((item) => item.value),
             backgroundColor: "rgba(75, 192, 192, 0.2)",
             borderColor: "rgba(75, 192, 192, 1)",
@@ -46,6 +46,11 @@ export const chartOptions = {
             ticks: {
                 color: "#f1f1f1",
             },
+            title: {
+                display: true,
+                text: '人',
+                color: "#f1f1f1",
+            }
         },
         x: {
             ticks: {
@@ -53,7 +58,7 @@ export const chartOptions = {
             },
             title: {
                 display: true,
-                text: 'Year',
+                text: '年',
                 color: "#f1f1f1",
             }
         }

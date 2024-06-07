@@ -91,6 +91,11 @@ thead {
     align-items: center;
 }
 
+.search-title {
+    text-align: center;
+    margin-bottom: -20px;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;

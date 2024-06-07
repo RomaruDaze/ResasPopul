@@ -60,15 +60,18 @@ function Searchbox({ setCityCode, setPrefCode, setCategory }) {
   };
 
   const getCityName = (code) =>
-    cityOptions.find((option) => option.code === code)?.name || "Select City";
+    cityOptions.find((option) => option.code === code)?.name || "市名";
   const getPrefName = (code) =>
-    prefOptions.find((option) => option.code === code)?.name ||
-    "Select Prefecture";
+    prefOptions.find((option) => option.code === code)?.name || "県名";
+  const getCategoryName = (code) =>
+    categories.find((option) => option.code === code)?.name || "人口カテゴリー";
 
   return (
     <div>
+      <div className="search-title">
+        <h1>検索条件</h1>
+      </div>
       <div className="searchbox">
-        <h1>検索条件：</h1>
         <div
           className="dropdown"
           onBlur={(event) => handleDropdownBlur(event, setShowPrefDropdown)}
@@ -134,8 +137,7 @@ function Searchbox({ setCityCode, setPrefCode, setCategory }) {
             className="dropbtn"
             onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
           >
-            {categories.find((option) => option.code === selectedCategory)
-              ?.name || "Select Category"}
+            {getCategoryName(selectedCategory)}
           </button>
           {showCategoryDropdown && (
             <div className="dropdown-content-cat">
